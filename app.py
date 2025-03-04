@@ -1,4 +1,4 @@
-import fitz  # PyMuPDF
+import fitz  
 import re
 from flask import Flask, request, jsonify
 from fuzzywuzzy import process  # Fuzzy matching için gerekli
