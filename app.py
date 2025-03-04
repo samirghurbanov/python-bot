@@ -42,5 +42,8 @@ def get_answer():
 
 
 # Flask server başlatma
+import os
+
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get("PORT", 10000))  # Render'daki PORT değişkenini alır, yoksa 10000 kullanır
+    app.run(host="0.0.0.0", port=port, debug=True)
